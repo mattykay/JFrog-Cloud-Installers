@@ -6,3 +6,6 @@
 nginx_daemon: nginx
 
 redirect_http_to_https_enabled: true
+
+nginx_repo: https://nginx.org/packages
+nginx_signing_key: https://nginx.org/keys/nginx_signing.key

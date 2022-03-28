@@ -1,7 +1,7 @@
 - name: Import nginx signing key
   become: yes
   rpm_key:
-    key: https://nginx.org/keys/nginx_signing.key
+    key: {{ nginx_signing_key }}
     state: present
 
 - name: Add nginx stable repo
@@ -14,10 +14,10 @@
     content: |
         [nginx-stable]
         name=nginx stable repo
-        baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+        baseurl={{ nginx_repo }}/centos/$releasever/$basearch/
         gpgcheck=1
         enabled=1
-        gpgkey=https://nginx.org/keys/nginx_signing.key
+        gpgkey={{ nginx_signing_key }}
         module_hotfixes=true
 
 - name: Update yum cache

@@ -100,6 +100,6 @@ postgresql_data_dir: "{{ default_postgresql_data_dir }}"
 postgresql_daemon: "{{ default_postgresql_daemon }}"
 postgresql_external_pid_file: "{{ default_postgresql_external_pid_file }}"
 
-postgres_apt_key_id: "{{ default_postgres_apt_key_id }}"
-postgres_apt_key_url: "{{ default_postgres_apt_key_url }}"
-postgres_apt_repository_repo: "{{ default_postgres_apt_repository_repo }}"
+postgres_apt_key_id: '0x7FCC7D46ACCC4CF8'
+postgres_apt_key_url: 'https://www.postgresql.org/media/keys/ACCC4CF8.asc'
+postgres_apt_repository_repo: 'deb https://apt.postgresql.org/pub/repos/apt/ {{ ansible_distribution_release }}-pgdg main'
