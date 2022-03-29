@@ -1,7 +1,7 @@
 - name: Import nginx signing key
   become: yes
   rpm_key:
-    key: {{ nginx_signing_key }}
+    key: "{{ nginx_signing_key }}"
     state: present
 
 - name: Add nginx stable repo
